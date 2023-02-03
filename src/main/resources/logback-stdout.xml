@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Spring Boot-ish pattern -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%5level) %magenta(%8.8X{XSessionId}) --- [%15.15thread] %cyan(%-40.40logger{39}) : %msg %magenta(%mdc%n)</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="no.modio.demo.customer.command" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
